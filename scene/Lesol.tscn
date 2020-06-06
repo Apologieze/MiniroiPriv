@@ -1,0 +1,1579 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://code/Letimer.gd" type="Script" id=1]
+[ext_resource path="res://image/bloc/Nouveau dossier/blockfal_00.png" type="Texture" id=2]
+[ext_resource path="res://image/bloc/Nouveau dossier/blockfal_01.png" type="Texture" id=3]
+[ext_resource path="res://image/bloc/Nouveau dossier/blockfal_02.png" type="Texture" id=4]
+[ext_resource path="res://image/bloc/Nouveau dossier/blockfal_03.png" type="Texture" id=5]
+[ext_resource path="res://image/bloc/Nouveau dossier/blockfal_04.png" type="Texture" id=6]
+[ext_resource path="res://image/bloc/Nouveau dossier/blockfal_05.png" type="Texture" id=7]
+[ext_resource path="res://image/bloc/Nouveau dossier/blockfal_06.png" type="Texture" id=8]
+[ext_resource path="res://image/bloc/Nouveau dossier/blockfal_07.png" type="Texture" id=9]
+[ext_resource path="res://image/bloc/Nouveau dossier/blockfal_08.png" type="Texture" id=10]
+[ext_resource path="res://image/bloc/Nouveau dossier/blockfal_09.png" type="Texture" id=11]
+[ext_resource path="res://image/bloc/Nouveau dossier/blockfal_10.png" type="Texture" id=12]
+[ext_resource path="res://image/bloc/Nouveau dossier/blockfal_11.png" type="Texture" id=13]
+[ext_resource path="res://image/bloc/Nouveau dossier/blockfal_12.png" type="Texture" id=14]
+[ext_resource path="res://image/bloc/Nouveau dossier/blockfal_13.png" type="Texture" id=15]
+[ext_resource path="res://code/blocfall.gd" type="Script" id=16]
+[ext_resource path="res://image/bloc/lava.png" type="Texture" id=17]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "fall",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "lava",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 13.5, 13.5 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Bloc1" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 48 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc1/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc2" type="AnimatedSprite" parent="."]
+position = Vector2( 80, 48 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc2/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc3" type="AnimatedSprite" parent="."]
+position = Vector2( 112, 48 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc3/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc4" type="AnimatedSprite" parent="."]
+position = Vector2( 144, 48 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc4/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc5" type="AnimatedSprite" parent="."]
+position = Vector2( 176, 48 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc5/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc6" type="AnimatedSprite" parent="."]
+position = Vector2( 208, 48 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc6/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc7" type="AnimatedSprite" parent="."]
+position = Vector2( 240, 48 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc7/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc8" type="AnimatedSprite" parent="."]
+position = Vector2( 272, 48 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc8/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc9" type="AnimatedSprite" parent="."]
+position = Vector2( 304, 48 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc9/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc10" type="AnimatedSprite" parent="."]
+position = Vector2( 336, 48 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc10"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc10/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc11" type="AnimatedSprite" parent="."]
+position = Vector2( 368, 48 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc11"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc11/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc12" type="AnimatedSprite" parent="."]
+position = Vector2( 400, 48 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc12"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc12/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc13" type="AnimatedSprite" parent="."]
+position = Vector2( 400, 80 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc13"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc13/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc14" type="AnimatedSprite" parent="."]
+position = Vector2( 368, 80 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc14"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc14/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc15" type="AnimatedSprite" parent="."]
+position = Vector2( 336, 80 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc15"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc15/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc16" type="AnimatedSprite" parent="."]
+position = Vector2( 304, 80 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc16"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc16/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc17" type="AnimatedSprite" parent="."]
+position = Vector2( 272, 80 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc17"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc17/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc18" type="AnimatedSprite" parent="."]
+position = Vector2( 240, 80 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc18"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc18/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc19" type="AnimatedSprite" parent="."]
+position = Vector2( 208, 80 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc19"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc19/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc20" type="AnimatedSprite" parent="."]
+position = Vector2( 176, 80 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc20"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc20/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc21" type="AnimatedSprite" parent="."]
+position = Vector2( 144, 80 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc21"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc21/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc22" type="AnimatedSprite" parent="."]
+position = Vector2( 112, 80 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc22"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc22/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc23" type="AnimatedSprite" parent="."]
+position = Vector2( 80, 80 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc23"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc23/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc24" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 80 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc24"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc24/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc25" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 112 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc25"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc25/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc26" type="AnimatedSprite" parent="."]
+position = Vector2( 80, 112 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc26"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc26/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc27" type="AnimatedSprite" parent="."]
+position = Vector2( 112, 112 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc27"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc27/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc28" type="AnimatedSprite" parent="."]
+position = Vector2( 144, 112 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc28"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc28/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc29" type="AnimatedSprite" parent="."]
+position = Vector2( 176, 112 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc29"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc29/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc30" type="AnimatedSprite" parent="."]
+position = Vector2( 208, 112 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc30"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc30/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc31" type="AnimatedSprite" parent="."]
+position = Vector2( 240, 112 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc31"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc31/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc32" type="AnimatedSprite" parent="."]
+position = Vector2( 272, 112 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc32"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc32/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc33" type="AnimatedSprite" parent="."]
+position = Vector2( 304, 112 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc33"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc33/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc34" type="AnimatedSprite" parent="."]
+position = Vector2( 336, 112 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc34"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc34/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc35" type="AnimatedSprite" parent="."]
+position = Vector2( 368, 112 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc35"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc35/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc36" type="AnimatedSprite" parent="."]
+position = Vector2( 400, 112 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc36"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc36/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc37" type="AnimatedSprite" parent="."]
+position = Vector2( 400, 144 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc37"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc37/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc38" type="AnimatedSprite" parent="."]
+position = Vector2( 368, 144 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc38"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc38/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc39" type="AnimatedSprite" parent="."]
+position = Vector2( 336, 144 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc39"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc39/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc40" type="AnimatedSprite" parent="."]
+position = Vector2( 304, 144 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc40"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc40/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc41" type="AnimatedSprite" parent="."]
+position = Vector2( 272, 144 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc41"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc41/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc42" type="AnimatedSprite" parent="."]
+position = Vector2( 240, 144 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc42"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc42/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc43" type="AnimatedSprite" parent="."]
+position = Vector2( 208, 144 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc43"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc43/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc44" type="AnimatedSprite" parent="."]
+position = Vector2( 176, 144 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc44"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc44/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc45" type="AnimatedSprite" parent="."]
+position = Vector2( 144, 144 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc45"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc45/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc46" type="AnimatedSprite" parent="."]
+position = Vector2( 112, 144 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc46"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc46/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc47" type="AnimatedSprite" parent="."]
+position = Vector2( 80, 144 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc47"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc47/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc48" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 144 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc48"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc48/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc49" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 176 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc49"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc49/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc50" type="AnimatedSprite" parent="."]
+position = Vector2( 80, 176 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc50"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc50/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc51" type="AnimatedSprite" parent="."]
+position = Vector2( 112, 176 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc51"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc51/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc52" type="AnimatedSprite" parent="."]
+position = Vector2( 144, 176 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc52"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc52/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc53" type="AnimatedSprite" parent="."]
+position = Vector2( 176, 176 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc53"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc53/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc54" type="AnimatedSprite" parent="."]
+position = Vector2( 208, 176 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc54"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc54/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc55" type="AnimatedSprite" parent="."]
+position = Vector2( 240, 176 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc55"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc55/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc56" type="AnimatedSprite" parent="."]
+position = Vector2( 272, 176 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc56"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc56/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc57" type="AnimatedSprite" parent="."]
+position = Vector2( 304, 176 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc57"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc57/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc58" type="AnimatedSprite" parent="."]
+position = Vector2( 336, 176 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc58"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc58/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc59" type="AnimatedSprite" parent="."]
+position = Vector2( 368, 176 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc59"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc59/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc60" type="AnimatedSprite" parent="."]
+position = Vector2( 400, 176 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc60"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc60/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc61" type="AnimatedSprite" parent="."]
+position = Vector2( 400, 208 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc61"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc61/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc62" type="AnimatedSprite" parent="."]
+position = Vector2( 368, 208 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc62"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc62/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc63" type="AnimatedSprite" parent="."]
+position = Vector2( 336, 208 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc63"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc63/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc64" type="AnimatedSprite" parent="."]
+position = Vector2( 304, 208 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc64"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc64/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc65" type="AnimatedSprite" parent="."]
+position = Vector2( 272, 208 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc65"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc65/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc66" type="AnimatedSprite" parent="."]
+position = Vector2( 240, 208 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc66"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc66/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc67" type="AnimatedSprite" parent="."]
+position = Vector2( 208, 208 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc67"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc67/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc68" type="AnimatedSprite" parent="."]
+position = Vector2( 176, 208 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc68"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc68/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc69" type="AnimatedSprite" parent="."]
+position = Vector2( 144, 208 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc69"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc69/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc70" type="AnimatedSprite" parent="."]
+position = Vector2( 112, 208 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc70"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc70/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc71" type="AnimatedSprite" parent="."]
+position = Vector2( 80, 208 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc71"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc71/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc72" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 208 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc72"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc72/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc73" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 240 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc73"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc73/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc74" type="AnimatedSprite" parent="."]
+position = Vector2( 80, 240 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc74"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc74/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc75" type="AnimatedSprite" parent="."]
+position = Vector2( 112, 240 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc75"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc75/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc76" type="AnimatedSprite" parent="."]
+position = Vector2( 144, 240 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc76"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc76/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc77" type="AnimatedSprite" parent="."]
+position = Vector2( 176, 240 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc77"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc77/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc78" type="AnimatedSprite" parent="."]
+position = Vector2( 208, 240 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc78"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc78/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc79" type="AnimatedSprite" parent="."]
+position = Vector2( 240, 240 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc79"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc79/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc80" type="AnimatedSprite" parent="."]
+position = Vector2( 272, 240 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc80"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc80/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc81" type="AnimatedSprite" parent="."]
+position = Vector2( 304, 240 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc81"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc81/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc82" type="AnimatedSprite" parent="."]
+position = Vector2( 336, 240 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc82"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc82/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc83" type="AnimatedSprite" parent="."]
+position = Vector2( 368, 240 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc83"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc83/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc84" type="AnimatedSprite" parent="."]
+position = Vector2( 400, 240 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc84"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc84/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc85" type="AnimatedSprite" parent="."]
+position = Vector2( 400, 272 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc85"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc85/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc86" type="AnimatedSprite" parent="."]
+position = Vector2( 368, 272 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc86"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc86/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc87" type="AnimatedSprite" parent="."]
+position = Vector2( 336, 272 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc87"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc87/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc88" type="AnimatedSprite" parent="."]
+position = Vector2( 304, 272 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc88"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc88/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc89" type="AnimatedSprite" parent="."]
+position = Vector2( 272, 272 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc89"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc89/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc90" type="AnimatedSprite" parent="."]
+position = Vector2( 240, 272 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc90"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc90/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc91" type="AnimatedSprite" parent="."]
+position = Vector2( 208, 272 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc91"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc91/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc92" type="AnimatedSprite" parent="."]
+position = Vector2( 176, 272 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc92"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc92/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc93" type="AnimatedSprite" parent="."]
+position = Vector2( 144, 272 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc93"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc93/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc94" type="AnimatedSprite" parent="."]
+position = Vector2( 112, 272 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc94"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc94/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc95" type="AnimatedSprite" parent="."]
+position = Vector2( 80, 272 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc95"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc95/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Bloc96" type="AnimatedSprite" parent="."]
+position = Vector2( 48, 272 )
+frames = SubResource( 1 )
+playing = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Bloc96"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloc96/Area2D"]
+shape = SubResource( 2 )
+[connection signal="body_entered" from="Bloc1/Area2D" to="Bloc1" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc1/Area2D" to="Bloc1" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc2/Area2D" to="Bloc2" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc2/Area2D" to="Bloc2" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc3/Area2D" to="Bloc3" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc3/Area2D" to="Bloc3" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc4/Area2D" to="Bloc4" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc4/Area2D" to="Bloc4" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc5/Area2D" to="Bloc5" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc5/Area2D" to="Bloc5" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc6/Area2D" to="Bloc6" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc6/Area2D" to="Bloc6" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc7/Area2D" to="Bloc7" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc7/Area2D" to="Bloc7" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc8/Area2D" to="Bloc8" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc8/Area2D" to="Bloc8" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc9/Area2D" to="Bloc9" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc9/Area2D" to="Bloc9" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc10/Area2D" to="Bloc10" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc10/Area2D" to="Bloc10" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc11/Area2D" to="Bloc11" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc11/Area2D" to="Bloc11" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc12/Area2D" to="Bloc12" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc12/Area2D" to="Bloc12" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc13/Area2D" to="Bloc13" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc13/Area2D" to="Bloc13" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc14/Area2D" to="Bloc14" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc14/Area2D" to="Bloc14" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc15/Area2D" to="Bloc15" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc15/Area2D" to="Bloc15" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc16/Area2D" to="Bloc16" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc16/Area2D" to="Bloc16" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc17/Area2D" to="Bloc17" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc17/Area2D" to="Bloc17" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc18/Area2D" to="Bloc18" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc18/Area2D" to="Bloc18" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc19/Area2D" to="Bloc19" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc19/Area2D" to="Bloc19" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc20/Area2D" to="Bloc20" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc20/Area2D" to="Bloc20" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc21/Area2D" to="Bloc21" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc21/Area2D" to="Bloc21" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc22/Area2D" to="Bloc22" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc22/Area2D" to="Bloc22" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc23/Area2D" to="Bloc23" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc23/Area2D" to="Bloc23" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc24/Area2D" to="Bloc24" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc24/Area2D" to="Bloc24" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc25/Area2D" to="Bloc25" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc25/Area2D" to="Bloc25" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc26/Area2D" to="Bloc26" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc26/Area2D" to="Bloc26" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc27/Area2D" to="Bloc27" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc27/Area2D" to="Bloc27" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc28/Area2D" to="Bloc28" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc28/Area2D" to="Bloc28" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc29/Area2D" to="Bloc29" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc29/Area2D" to="Bloc29" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc30/Area2D" to="Bloc30" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc30/Area2D" to="Bloc30" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc31/Area2D" to="Bloc31" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc31/Area2D" to="Bloc31" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc32/Area2D" to="Bloc32" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc32/Area2D" to="Bloc32" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc33/Area2D" to="Bloc33" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc33/Area2D" to="Bloc33" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc34/Area2D" to="Bloc34" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc34/Area2D" to="Bloc34" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc35/Area2D" to="Bloc35" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc35/Area2D" to="Bloc35" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc36/Area2D" to="Bloc36" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc36/Area2D" to="Bloc36" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc37/Area2D" to="Bloc37" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc37/Area2D" to="Bloc37" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc38/Area2D" to="Bloc38" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc38/Area2D" to="Bloc38" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc39/Area2D" to="Bloc39" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc39/Area2D" to="Bloc39" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc40/Area2D" to="Bloc40" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc40/Area2D" to="Bloc40" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc41/Area2D" to="Bloc41" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc41/Area2D" to="Bloc41" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc42/Area2D" to="Bloc42" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc42/Area2D" to="Bloc42" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc43/Area2D" to="Bloc43" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc43/Area2D" to="Bloc43" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc44/Area2D" to="Bloc44" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc44/Area2D" to="Bloc44" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc45/Area2D" to="Bloc45" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc45/Area2D" to="Bloc45" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc46/Area2D" to="Bloc46" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc46/Area2D" to="Bloc46" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc47/Area2D" to="Bloc47" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc47/Area2D" to="Bloc47" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc48/Area2D" to="Bloc48" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc48/Area2D" to="Bloc48" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc49/Area2D" to="Bloc49" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc49/Area2D" to="Bloc49" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc50/Area2D" to="Bloc50" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc50/Area2D" to="Bloc50" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc51/Area2D" to="Bloc51" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc51/Area2D" to="Bloc51" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc52/Area2D" to="Bloc52" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc52/Area2D" to="Bloc52" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc53/Area2D" to="Bloc53" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc53/Area2D" to="Bloc53" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc54/Area2D" to="Bloc54" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc54/Area2D" to="Bloc54" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc55/Area2D" to="Bloc55" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc55/Area2D" to="Bloc55" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc56/Area2D" to="Bloc56" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc56/Area2D" to="Bloc56" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc57/Area2D" to="Bloc57" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc57/Area2D" to="Bloc57" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc58/Area2D" to="Bloc58" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc58/Area2D" to="Bloc58" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc59/Area2D" to="Bloc59" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc59/Area2D" to="Bloc59" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc60/Area2D" to="Bloc60" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc60/Area2D" to="Bloc60" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc61/Area2D" to="Bloc61" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc61/Area2D" to="Bloc61" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc62/Area2D" to="Bloc62" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc62/Area2D" to="Bloc62" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc63/Area2D" to="Bloc63" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc63/Area2D" to="Bloc63" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc64/Area2D" to="Bloc64" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc64/Area2D" to="Bloc64" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc65/Area2D" to="Bloc65" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc65/Area2D" to="Bloc65" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc66/Area2D" to="Bloc66" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc66/Area2D" to="Bloc66" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc67/Area2D" to="Bloc67" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc67/Area2D" to="Bloc67" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc68/Area2D" to="Bloc68" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc68/Area2D" to="Bloc68" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc69/Area2D" to="Bloc69" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc69/Area2D" to="Bloc69" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc70/Area2D" to="Bloc70" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc70/Area2D" to="Bloc70" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc71/Area2D" to="Bloc71" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc71/Area2D" to="Bloc71" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc72/Area2D" to="Bloc72" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc72/Area2D" to="Bloc72" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc73/Area2D" to="Bloc73" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc73/Area2D" to="Bloc73" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc74/Area2D" to="Bloc74" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc74/Area2D" to="Bloc74" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc75/Area2D" to="Bloc75" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc75/Area2D" to="Bloc75" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc76/Area2D" to="Bloc76" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc76/Area2D" to="Bloc76" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc77/Area2D" to="Bloc77" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc77/Area2D" to="Bloc77" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc78/Area2D" to="Bloc78" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc78/Area2D" to="Bloc78" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc79/Area2D" to="Bloc79" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc79/Area2D" to="Bloc79" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc80/Area2D" to="Bloc80" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc80/Area2D" to="Bloc80" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc81/Area2D" to="Bloc81" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc81/Area2D" to="Bloc81" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc82/Area2D" to="Bloc82" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc82/Area2D" to="Bloc82" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc83/Area2D" to="Bloc83" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc83/Area2D" to="Bloc83" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc84/Area2D" to="Bloc84" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc84/Area2D" to="Bloc84" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc85/Area2D" to="Bloc85" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc85/Area2D" to="Bloc85" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc86/Area2D" to="Bloc86" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc86/Area2D" to="Bloc86" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc87/Area2D" to="Bloc87" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc87/Area2D" to="Bloc87" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc88/Area2D" to="Bloc88" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc88/Area2D" to="Bloc88" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc89/Area2D" to="Bloc89" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc89/Area2D" to="Bloc89" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc90/Area2D" to="Bloc90" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc90/Area2D" to="Bloc90" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc91/Area2D" to="Bloc91" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc91/Area2D" to="Bloc91" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc92/Area2D" to="Bloc92" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc92/Area2D" to="Bloc92" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc93/Area2D" to="Bloc93" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc93/Area2D" to="Bloc93" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc94/Area2D" to="Bloc94" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc94/Area2D" to="Bloc94" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc95/Area2D" to="Bloc95" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc95/Area2D" to="Bloc95" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bloc96/Area2D" to="Bloc96" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Bloc96/Area2D" to="Bloc96" method="_on_Area2D_body_exited"]

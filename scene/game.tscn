@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://tileset/egypte.tres" type="TileSet" id=1]
+[ext_resource path="res://scene/Lesol.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/player1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scene/player2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://code/player3.gd" type="Script" id=5]
+[ext_resource path="res://code/Bordure.gd" type="Script" id=6]
+[ext_resource path="res://code/player4.gd" type="Script" id=7]
+
+[node name="scene1" type="Node2D"]
+
+[node name="Timer" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1, 0 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 1, 0 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 65536, 1, 0, 65549, 1, 0, 131072, 1, 0, 131085, 1, 0, 196608, 1, 0, 196621, 1, 0, 262144, 1, 0, 262157, 1, 0, 327680, 1, 0, 327693, 1, 0, 393216, 1, 0, 393229, 1, 0, 458752, 1, 0, 458765, 1, 0, 524288, 1, 0, 524301, 1, 0, 589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0, 589834, 1, 0, 589835, 1, 0, 589836, 1, 0, 589837, 1, 0 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="player1" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 112, 80 )
+
+[node name="player2" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 336, 80 )
+
+[node name="player3" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 112, 240 )
+script = ExtResource( 5 )
+
+[node name="player4" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 336, 240 )
+script = ExtResource( 7 )
+
+[node name="Bordure" type="Area2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bordure"]
+polygon = PoolVector2Array( 4.9608, 4.2936, 1.53647, 316.904, 458.764, 316.904, 455.823, 5.95987, 4.99384, 3.09961, 26.2588, 25.832, 422.259, 25.778, 422.131, 294.152, 25.9226, 294.281, 26.084, 25.832 )
+[connection signal="body_entered" from="Bordure" to="Bordure" method="_on_Bordure_body_entered"]
