@@ -18,6 +18,7 @@ var idle_right
 var run_down
 var run_up
 var run_right
+var victoire 
 
 onready var Anim = get_node("Anim")
 onready var Fleche = get_node("Pivot")
@@ -40,6 +41,7 @@ func _ready():
 			run_down = "run_down1"
 			run_right = "run_right1"
 			run_up = "run_up1"
+			victoire = "victoire_1"
 		
 		elif skin == 2:
 			idle_down = "idle_down2"
@@ -48,6 +50,7 @@ func _ready():
 			run_down = "run_down2"
 			run_right = "run_right2"
 			run_up = "run_up2"	
+			victoire = "victoire_2"
 		
 		elif skin == 3:
 			idle_down = "idle_down3"
@@ -56,6 +59,7 @@ func _ready():
 			run_down = "run_down3"
 			run_right = "run_right3"
 			run_up = "run_up3"		
+			victoire = "victoire_3"
 		
 		elif skin == 4:
 			idle_down = "idle_down4"
@@ -64,6 +68,7 @@ func _ready():
 			run_down = "run_down4"
 			run_right = "run_right4"
 			run_up = "run_up4"	
+			victoire = "victoire_4"
 
 
 
@@ -78,44 +83,48 @@ func _physics_process(delta):
 				GLOBAL.plastalive = 2
 			if GLOBAL.player3life == true:
 				GLOBAL.plastalive = 3
-		visible = false
-		$CollisionShape2D.disabled = true
+			print("Winner", GLOBAL.plastalive)
+		if GLOBAL.plastalive != 4:
+			visible = false
+			$CollisionShape2D.disabled = true
 	
 #	z_index = GLOBAL.index3
 	
 	if GLOBAL.nb_player > 3:
-		mouvement_loop()
-#		GLOBAL.yplayer3 = position.y
-		velation = vel.x + vel.y
-		if velation == 0:
-			if direction == 3:
-				animation = idle_down
-				Anim.flip_h = false
-			elif direction == 1:
-				animation = idle_up
-				Anim.flip_h = false
-			elif direction == 2:
-				animation = idle_right
-				Anim.flip_h = false
-			elif direction == 4:
-				animation = idle_right
-				Anim.flip_h = true
+		if GLOBAL.plastalive == 4:
+			Anim.play(victoire)
 		else:
-			if direction == 3:
-				animation = run_down
-				Anim.flip_h = false
-			elif direction == 1:
-				animation = run_up
-				Anim.flip_h = false
-			elif direction == 2:
-				animation = run_right
-				Anim.flip_h = false
-			elif direction == 4:
-				animation = run_right
-				Anim.flip_h = true
-		Anim.play(animation)
-		
-		move_and_slide(vel)
+			mouvement_loop()
+			velation = vel.x + vel.y
+			if velation == 0:
+				if direction == 3:
+					animation = idle_down
+					Anim.flip_h = false
+				elif direction == 1:
+					animation = idle_up
+					Anim.flip_h = false
+				elif direction == 2:
+					animation = idle_right
+					Anim.flip_h = false
+				elif direction == 4:
+					animation = idle_right
+					Anim.flip_h = true
+			else:
+				if direction == 3:
+					animation = run_down
+					Anim.flip_h = false
+				elif direction == 1:
+					animation = run_up
+					Anim.flip_h = false
+				elif direction == 2:
+					animation = run_right
+					Anim.flip_h = false
+				elif direction == 4:
+					animation = run_right
+					Anim.flip_h = true
+			Anim.play(animation)
+			
+			move_and_slide(vel)
 	
 		
 	

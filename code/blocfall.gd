@@ -18,38 +18,39 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if node2.pulse == false:
-		if tomber == true:
-			if vague == false:
-				vague = true
-				randomize()
-				choix = randi()%luck+1
-				if choix == luck:
-					GLOBAL.nbfall += 1
-				if GLOBAL.nbfall > 5:
-					choix = 30
-				if GLOBAL.nbfall < 2:
-					vague = false
-				
-				if choix == luck:
-						if choix == luck:
-							play("fall")
-							yield(get_tree().create_timer(1.0), "timeout")
-							tomber = false
-							play("lava")
-							playing = false
-							choix = 0
-							if dedans1 == true:
-								GLOBAL.player1life = false
-							if dedans2 == true:
-								GLOBAL.player2life = false
-							if dedans3 == true:
-								GLOBAL.player3life = false
-							if dedans4 == true:
-								GLOBAL.player4life = false
-						GLOBAL.nbfall = 0
-	else:
-		vague = false
+	if GLOBAL.plastalive == 0:
+		if node2.pulse == false:
+			if tomber == true:
+				if vague == false:
+					vague = true
+					randomize()
+					choix = randi()%luck+1
+					if choix == luck:
+						GLOBAL.nbfall += 1
+					if GLOBAL.nbfall > 5:
+						choix = 30
+					if GLOBAL.nbfall < 2:
+						vague = false
+					
+					if choix == luck:
+							if choix == luck:
+								play("fall")
+								yield(get_tree().create_timer(1.0), "timeout")
+								tomber = false
+								play("lava")
+								playing = false
+								choix = 0
+								if dedans1 == true:
+									GLOBAL.player1life = false
+								if dedans2 == true:
+									GLOBAL.player2life = false
+								if dedans3 == true:
+									GLOBAL.player3life = false
+								if dedans4 == true:
+									GLOBAL.player4life = false
+							GLOBAL.nbfall = 0
+		else:
+			vague = false
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("player"):

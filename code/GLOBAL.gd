@@ -47,9 +47,10 @@ func _physics_process(delta):
 		palive = 0
 		plastalive = 0
 #	print(GLOBAL.lastplayerbump)
-	if plastalive > 0:
-		print(plastalive)
-		plastalive = 0
+
+#	if plastalive > 0:
+#		print(plastalive)
+##		plastalive = 0
 		
 #	if nb_player == 2:
 #		if yplayer2 < yplayer1:
